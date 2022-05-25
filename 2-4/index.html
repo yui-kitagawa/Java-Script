@@ -1,0 +1,41 @@
+
+<!--要勉強-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text1" placeholder="入力してください">
+    <input type="button" value="追加" onclick="addText();">
+    <input type="button" value="削除" onclick="deleteText();">
+    <br>
+    <textarea id="area1" cols="50" rows="8" placeholder="ここに出力されます"></textarea>
+    
+    <script>   
+    function addText() {
+		let UserString = document.getElementById('text1').value;
+        //①入力欄のテキストを取得
+		// valueを付けることで入力された「値」を取得できる
+		let TargetList = document.getElementById('area1');
+        //②出力欄のテキストエリアを取得
+        TargetList.value = UserString += "\n" + TargetList.value;
+        //③出力欄に入力された文字列を足していく
+        
+    }
+
+    function deleteText() {
+		let UserStringRmv = document.getElementById('text1');
+		UserStringRmv.value = '';
+        //④出力欄のテキストを空にするにはvalueを空にする必要がある
+        let TargetListRmv = document.getElementById('area1');
+		TargetListRmv.value = '';
+        //⑤入力欄のテキストを空にする
+        
+    }
+    </script>
+</body>
+</html>
