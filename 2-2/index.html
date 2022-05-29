@@ -11,11 +11,17 @@
 
     <script>
         function changeBtn() {
-            let change = document.getElementById('p1').style.display='none';
+           let change = document.getElementById('p1');
+           if(change.style.display == "none"){
+               change.style.display = "block";
+           } else {
+               change.style.display = "none";
+           }
+        } 
             // ①id「p1」の要素を取得
             // ②取得したp1に「display:none」が無かったら、「display:none」を付与する。
             // 取得したp1に「display:none」があったら、「display:block」を付与する。
-        }
+        
     </script>
 </body>
 </html>
